@@ -4,7 +4,7 @@ MechaCar_Statistical_Analysis
 
 Project Overview
 
-AutosRUs’ newest prototype, the MechaCar, is suffering from production troubles that are blocking the manufacturing team’s progress. AutosRUs’ upper management wants to have to review the production data for insights that may help the manufacturing team.
+AutosRUs’ newest prototype, the MechaCar, is suffering from production troubles that are blocking the manufacturing team’s progress. AutosRUs’ upper management want to have to review the production data for insights that may help the manufacturing team. Concise data.
 
 Purpose
 
@@ -12,15 +12,16 @@ In this challenge, we need to perform following points on basis of statistics:
 
 Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes.
 Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots.
-Run t-tests to determine if the manufacturing lots are statistically different from the mean population.
+Run several t-tests to determine if the manufacturing lots are statistically different from the mean population.
 Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers.
 For each statistical analysis, you’ll write a - summary interpretation of the findings.
 Requirements
 
 Linear Regression to Predict MPG
 Summary Statistics on Suspension Coils
-T-Test on Suspension Coils
 Design a Study Comparing the MechaCar to the Competition
+T-Test on Suspension Coils
+
 Resources
 
 Data Source:
@@ -35,7 +36,7 @@ Results & Analysis
 
 Linear Regression to Predict MPG
 
-With multiple linear regression model, we are identifying which variables (vehicle weight, spoiler angle, ground clearance, AWD and vehicle length in our case) in the dataset predict the mpg of MechaCar prototypes. In simple words, we are asking if there is a relationship between variables and mpg of MechaCar prototypes.
+With multiple linear regression model, we are identifying which variables (vehicle weight, ground clearance, spoiler angle, AWD and vehicle length in our case) in the dataset predict the mpg of MechaCar prototypes. In simple words, we are asking if there is a relationship between variables and mpg of MechaCar prototypes.
 
 Null hypothesis and Alternative hypothesis for linear regression
 
@@ -44,6 +45,8 @@ For multiple linear regression model, following hypothesis will help to understa
 H0: The slope of the linear model is zero, or m = 0 (If there is no significant linear relationship, each dependent value would be determined by random chance and error. Therefore, our linear model would be a flat line with a slope of 0).
 
 Ha: The slope of the linear model is not zero, or m ≠ 0 (If there is significant linear relationship, each dependent value would not be determined by random chance and error. Therefore, our linear model would not be a flat line with a slope greater or lesser than 0).
+
+![Del1_LinearRegression_to_Predict_MPG](https://user-images.githubusercontent.com/91812090/158069969-c07aa19b-030e-4081-94ac-643cf5474ebc.png)
 
 
 
@@ -73,6 +76,7 @@ The design specifications for the MechaCar suspension coils dictate that the var
 Lot Summary(total_summary)
 
 The current manufacturing data meet this design specification for all manufacturing lots in total. According to the results (Figure 2) shows that variance is 62.29 PSI, that is within requirements of not exceeding variance 100 PSI.
+![Del2_Total_Summary_Suspension_Coil(PSI)](https://user-images.githubusercontent.com/91812090/158070443-308336b6-d76f-4887-812c-f49fbd9c9f53.png)
 
 
 
@@ -81,6 +85,7 @@ Figure 2: Summary Statistics on Suspension Coils for All Lots.
 Indivisual lot Summary(lot_summary)
 
 The current manufacturing data partially meet this design specification for each lot separately. According to the results (Figure 3), it shows that Lot 1 and Lot 2 meet the design specification with a variance is 0.9795918 and 7.4693878 PSI respectively, and it is within requirements of not exceeding variance 100 PSI. Lot 3 does not meet the design specification, because of its variance of 170.286122 PSI and that exceed the requirements variance of 100 PSI.
+![Del2_lot_Summary_Suspension_Coil(PSI)](https://user-images.githubusercontent.com/91812090/158070483-9bd7b3eb-fbcd-4f4c-807f-59f99c1ae999.png)
 
 
 
@@ -96,21 +101,25 @@ Ha: There is statistical difference between the suspension coil data set mean an
 
 In order to reject or fail to reject our null hypothesis we have to look at the p-value that determines if there is a statistical difference between the observed sample mean and its presumed population mean. According to the result (Figure 3) p-value for all manufacturing lots is 0.06028, for lot 1 = 1, for lot 2 = 0.6072, and for lot 3 = 0.04168. In both lot 1 and lot 2 cases p-value is above the assumed significance level of 0.05. Therefore, there is not enough evidence, and we fail to reject the null hypothesis, meaning that the two means not statistically different.
 
+![Del3_lot_Summary_t test](https://user-images.githubusercontent.com/91812090/158070504-49ee37c1-a358-492a-a0e8-39e15d03f3df.png)
 
 
 Figure 4: t-Test for All Lots Total.
 
- 
+ ![Del3_lot1_t test](https://user-images.githubusercontent.com/91812090/158070581-21cc8dc8-52b8-4973-b7c2-42c2d485c7b1.png)
 
+![Del3_lot2_t test](https://user-images.githubusercontent.com/91812090/158070584-baca3bb6-c251-48cf-a45a-b5769e4088ca.png)
+
+![Del3_lot3_t test](https://user-images.githubusercontent.com/91812090/158070609-827c9097-8396-429e-8301-3c1dd36cb433.png)
 
 
 Figure 5: t-Test for Each Lot Individually.
 
 Study Design: MechaCar vs Competition
 
-What metrics would be of interest to a consumer (cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating .etc.)?
+What metrics would be of interest to a consumer (cost, highway fuel efficiency city or horse power, safety rating or maintenance cost .etc.)?
 
-As per the environmental awareness customers are more cautious about pollution and car emissions as well as fuel efficiencies around city and highways. In this case electric cars, hybrid cars are popular in consumers, But because of cost people can’t afford or don’t want to invest in it. Mechacar can provide good alternate. So, we would test following metrices to compare Mechacar against competition.
+As per the environmental awareness customers are more cautious about pollution and car emissions as well as fuel efficiencies around city and highways. In this case electric cars, hybrid cars are popular in consumers, But because of cost people can’t afford or don’t want to invest in it. Mechacar can provide a great alternate. So, we would test following metrices to compare Mechacar against competition.
 
 Competition: City and Highway fuel efficiencies.
 
@@ -125,7 +134,7 @@ What statistical test would you use to test the hypothesis? And why?
 To test the hypotheses, ANOVA test comes in the picture. It also known as Analysis of Variance.
 ANOVA is used to test the means of a single dependent variable across a single independent variable with multiple groups.
 Here we would use an ANOVA test to complete this analysis for both types of fuel efficiencies.
-Also, we can use the ggplot2 library to show the potential spread between different cars using a boxplot.
+We also can use the ggplot2 library to show the potential spread between different cars using a boxplot.
 What data is needed to run the statistical test?
 
 To run this statistical test, we need the data from:
@@ -133,4 +142,4 @@ To run this statistical test, we need the data from:
 Model ID, Manufacturer, fuel efficiency data, class type data
 It will need fuel efficiency data from 50 individual cars.
 Then we can create a sample size of data for each car in the class type.
-For example, if there were 10 cars in the class type, then we can have a top of 500 data points collected for each fuel efficiency type.
+An example, if there were 10 cars in the class type, then we can have a top of 500 data points collected for each fuel efficiency type. With rising gas prices an alternative is also a great option.
